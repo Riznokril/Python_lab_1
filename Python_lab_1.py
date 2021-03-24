@@ -1,6 +1,11 @@
 class Park:
-    def __init__(self, price_entrance_ticket = 0, length_bicycle_paths = 1234,  address = 'George Washington, 17',
-    name = "Pogulyanka", max_number_people = 500, number_statues = 1):
+    def __init__(
+            self, price_entrance_ticket = 0,
+            length_bicycle_paths = 1234,  
+            address = 'George Washington, 17',
+            name = "Pogulyanka",
+            max_number_people = 500,
+            number_statues = 1):
         self.price_entrance_ticket = price_entrance_ticket
         self.length_bicycle_paths = length_bicycle_paths
         self.address = address
@@ -23,9 +28,14 @@ class Park:
             f'Number of statues = {self.number_statues} \n' 
     
 
+if __name__ == '__main__':
+    park_1 = Park()
+    park_2 = Park(112, 0, "Doroshnka", "Bogdan", 1200, 3)
 
-park_1 = Park()
+    print("----First park----")
+    park_1.print_square()
+    print(park_1)
 
-park_1.print_square()
-
-print(park_1)
+    print("----Second park----")
+    park_2.print_square()   
+    print(park_2)
